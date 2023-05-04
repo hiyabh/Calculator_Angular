@@ -1,4 +1,11 @@
-# Calculator
+<h1 line="center">Calculator</h1>
+
+<h3>The project is available for viewing here:</h3>
+http://calculator-new.azurewebsites.net/htmlpage1.html
+
+
+
+##
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
 
