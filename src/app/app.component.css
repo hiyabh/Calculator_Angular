@@ -1,0 +1,303 @@
+/* General
+-------------------------------*/
+
+@font-face {
+  font-family: bpdots;
+  /*src: url("BPdots.otf") format("opentype");*/
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient( to right, rgb(189, 195, 199) 0%, rgb(236, 240, 241) 40%, rgb(236, 240, 241) 60%, rgb(189, 195, 199) 100%);
+}
+
+h1 {
+  font-family: open sans;
+  text-align: center;
+  color: rgb(155, 178, 199);
+  text-shadow: 0 1px 0 white;
+}
+
+/* Calculator
+-------------------------------*/
+
+.calculator {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 250px;
+  background-color: rgb(44, 62, 80);
+  background-image: linear-gradient( to right, rgb(51, 75, 99) 0%, rgb(75, 101, 128) 40%, rgb(75, 101, 128) 60%, rgb(51, 75, 99) 100%);
+  margin: 10px auto;
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.6);
+  border-bottom-color: black;
+  border-right-color: black;
+  border-left-color: black;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4), inset 0 0 3px 4px rgba(0, 0, 0, 0.5);
+  border-top: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+.calculator2 {
+  position: absolute;
+  top: 20%;
+  left: 53%;
+  float: left;
+  width: 250px;
+  background-color: rgb(44, 62, 80);
+  background-image: linear-gradient( to right, rgb(51, 75, 99) 0%, rgb(75, 101, 128) 40%, rgb(75, 101, 128) 60%, rgb(51, 75, 99) 100%);
+  margin: 10px auto;
+  border-width: 1px;
+  border-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.6);
+  border-bottom-color: black;
+  border-right-color: black;
+  border-left-color: black;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4), inset 0 0 3px 4px rgba(0, 0, 0, 0.5);
+  border-top: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+
+/* Screen
+-------------------------------*/
+.screen-wrapper {
+  margin: 15px;
+  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 2px rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+#screen {
+  height: 60px;
+  background-image: linear-gradient(to bottom, rgb(255, 204, 0) 0%, rgb(255, 222, 116) 100%);
+  border-radius: 30%/7%;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+  padding: 8px 5px;
+}
+
+#screen2 {
+  
+  background-image: linear-gradient(to bottom, rgb(255, 204, 0) 0%, rgb(255, 222, 116) 100%);
+  border-radius: 30%/7%;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+  padding: 8px 5px;
+}
+#expression {
+  font-family: bpdots;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#result {
+  font-family: bpdots;
+  font-size: 18px;
+  text-align: right;
+  margin-top: 10px;
+  white-space: nowrap;
+}
+
+#typed-cursor {
+  font-size: 22px;
+  line-height: 24px;
+  vertical-align: top;
+  font-weight: bold;
+  color: black;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  from,to {
+  color: transparent;
+}
+
+50% {
+  color: black;
+}
+
+}
+
+@-moz-keyframes blink {
+  from,to {
+    color: transparent;
+  }
+
+  50% {
+    color: black;
+  }
+}
+
+@-webkit-keyframes blink {
+  from,to {
+  color: transparent;
+}
+
+50% {
+  color: black;
+}
+
+}
+
+@-ms-keyframes blink {
+  from,to {
+  color: transparent;
+}
+
+50% {
+  color: black;
+}
+
+}
+
+@-o-keyframes blink {
+  from,to {
+  color: transparent;
+}
+
+50% {
+  color: black;
+}
+
+}
+
+/* Keys
+-------------------------------*/
+
+.keys {
+  width: 100%;
+  border-spacing: 12px;
+}
+
+.key {
+  width: 25%;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(236, 240, 241);
+  font-size: 18px;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 5px;
+  border-width: 3px;
+  border-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.2);
+  border-left-color: rgba(0, 0, 0, 0.1);
+  border-right-color: rgba(0, 0, 0, 0.1);
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease-out;
+}
+
+.key-clear {
+  width: 25%;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(236, 240, 241);
+  font-size: 18px;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 5px;
+  border-width: 3px;
+  border-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.2);
+  border-left-color: rgba(0, 0, 0, 0.1);
+  border-right-color: rgba(0, 0, 0, 0.1);
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease-out;
+}
+
+.Clear-History {
+  position:relative;
+  /*top: 25%;
+  left: 25%;*/
+  /*width: 50%;*/
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(236, 240, 241);
+  /*font-size: 18px;*/
+  text-align: center;
+  color:red;
+  padding: 3px 0;
+  margin:10px;
+  border-radius: 5px;
+  border-width: 3px;
+  border-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.2);
+  border-left-color: rgba(0, 0, 0, 0.1);
+  border-right-color: rgba(0, 0, 0, 0.1);
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease-out;
+}
+
+.Clear-History:hover {
+  border: 3px solid rgba(226, 154, 26, 0.6);
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.7), inset 0 0 6px rgba(0, 0, 0, 0.4);
+  color: rgba(226, 170, 26, 1);
+  text-shadow: 0 0 10px rgba(255, 218, 153, 1);
+}
+
+
+.key:hover {
+  border: 3px solid rgba(226, 154, 26, 0.6);
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.7), inset 0 0 6px rgba(0, 0, 0, 0.4);
+  color: rgba(226, 170, 26, 1);
+  text-shadow: 0 0 10px rgba(255, 218, 153, 1);
+}
+
+  .key span {
+    font-size: 10px;
+    vertical-align: top;
+  }
+
+.red.key {
+  background-image: linear-gradient( to bottom, rgb(150, 52, 52) 0%, rgb(190, 77, 77) 50%, rgb(150, 52, 52) 100%);
+}
+
+.blue.key {
+  background-image: linear-gradient( to bottom, rgb(44, 62, 80) 0%, rgb(58, 80, 102) 50%, rgb(44, 62, 80) 100%);
+}
+
+.gray.key {
+  background-image: linear-gradient( to bottom, rgb(110, 133, 151) 0%, rgb(130, 155, 175) 50%, rgb(110, 133, 151) 100%);
+}
+
+.footer {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.17);
+}
+
+.key.substract,
+.key.divide,
+.key.add,
+.key.eval {
+  font-size: 28px;
+  line-height: 18px;
+}
+
+.key.substract {
+  vertical-align: top;
+}

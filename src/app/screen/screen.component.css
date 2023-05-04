@@ -1,0 +1,29 @@
+#result {
+  font-family: bpdots;
+  font-size: 32px;
+  text-align: right;
+  margin-top: 10px;
+  white-space: nowrap;
+}
+
+#expression {
+  font-family: bpdots;
+  font-size: 14px;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#typed-cursor {
+  font-size: 22px;
+  line-height: 24px;
+  vertical-align: top;
+  font-weight: bold;
+  color: black;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}

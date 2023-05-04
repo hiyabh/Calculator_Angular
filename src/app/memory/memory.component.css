@@ -1,0 +1,6 @@
+#screen2 {
+  background-image: linear-gradient(to bottom, rgb(255, 204, 0) 0%, rgb(255, 222, 116) 100%);
+  border-radius: 30%/7%;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
+  padding: 8px 5px;
+}

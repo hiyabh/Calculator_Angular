@@ -1,20 +1,77 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <title>Calculator</title>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:600" rel="stylesheet" type="text/css" />
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
+</head>
+<body>
+ 
+    <h1>Calculator</h1>
+
+    <div class="calculator">
+      <div class="screen-wrapper">
+        <div id="screen2">
+          <!--<app-memory></app-memory>-->
+          <div id="screen2">
+            <p>Memory</p>
+            <ul id="memory">
+              <li *ngFor="let memory of memorys">
+                {{memory.first}}{{memory.op}}{{memory.secand}}
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <button class="red Clear-History" id="clear">Clear History</button>
+    </div>
+
+
+  <div class="calculator2">
+    <div class="screen-wrapper">
+      <div id="screen">
+        <!--<app-screen></app-screen>-->
+        <div id="expression">
+          <span id="typed-cursor">{{screen2}}</span>
+        </div>
+        <div id="result">{{screen1}}</div>
+
+      </div>
+    </div>
+
+    <table class="keys">
+      <tbody>
+       
+        <tr>
+          <td class="blue key" id="num_7" (click)="click_number(7)">7</td>
+          <td class="blue key" id="num_8" (click)="click_number(8)">8</td>
+          <td class="blue key" id="num_9" (click)="click_number(9)">9</td>
+          <td class="red key" id="clear" (click)="clear()">C</td>
+        </tr>
+        <tr>
+          <td class="blue key" id="num_4" (click)="click_number(4)">4</td>
+          <td class="blue key" id="num_5" (click)="click_number(5)">5</td>
+          <td class="blue key" id="num_6" (click)="click_number(6)">6</td>
+          <td class="gray key substract" id="op_substract" (click)="click_minus()">&ndash;</td>
+        </tr>
+        <tr>
+          <td class="blue key" id="num_1" (click)="click_number(1)">1</td>
+          <td class="blue key" id="num_2" (click)="click_number(2)">2</td>
+          <td class="blue key" id="num_3" (click)="click_number(3)">3</td>
+          <td class="gray key add" id="op_add" rowspan="2" (click)="click_plus()">+</td>
+        </tr>
+        <tr>
+          <td class="key-clear" id="num_dot"></td>
+          <td class="blue key" id="num_0" (click)="click_number(0)">0</td>
+          <td class="blue key eval" id="eval" (click)="click_eval()">=</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="footer">Calculator</p>
+  </div>
+
+</body>
+</html>
